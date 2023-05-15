@@ -1,0 +1,131 @@
+@font-face {
+    font-family:'LeagueMono';
+    src: url("fonts/LeagueMono-VF.ttf");
+    font-style: normal;
+    font-stretch: 50% 200%;
+}  
+@font-face {
+    font-family: fuz;
+    src: url("fonts/green\ fuz.otf");
+}
+
+:root {
+    --shadow-container:
+        -5px -5px 9px 1px rgba(255,255,255,0.45), 
+        5px 5px 9px 1px rgba(94,104,121,0.3); 
+    --shadow-slots:
+        inset 0 0 35px 10px rgba(0,0,0,0.25), 
+        inset 0 2px 1px 1px rgba(255,255,255,0.9), 
+        inset 0 -2px 1px rgba(0,0,0,0.25);
+    --shadow-lever-enabled:
+        -5px -5px 9px 2px rgba(255,255,255,0.45), 
+        5px 5px 9px 4px rgba(94,104,121,0.3);
+    --shadow-lever-disabled:
+        inset -5px -5px 9px 1px rgba(255,255,255,0.45), 
+        inset 5px 5px 9px 1px rgba(94,104,121,0.3);
+}
+
+body {
+    min-width: 900px;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    background-color: #dde1e7;
+}
+
+#result {
+    width: 100%;
+    min-width: 900px;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font: 4em 'fuz';
+    font-weight: bold;
+    font-stretch: 200%;
+}
+
+#container {
+    font: 2em 'LeagueMono';
+    width: 900px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    margin-top : 0%;
+    background-color: #dde1e7;
+    border-radius: 10px;
+    box-shadow: var(--shadow-container);
+    overflow: hidden;
+}
+
+.slots {
+    top: 5%;
+    width: 30%;
+    height: 90%;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-slots);
+    overflow: hidden;
+}
+
+.slots:nth-child(1) {
+    left: 2%;
+}
+.slots:nth-child(2) {
+    left: 35%;
+}
+.slots:nth-child(3) {
+    left: 68%;
+}
+
+ul.reels {
+    position: relative;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+}
+
+li.cell {
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    line-height: 60px;
+    font-weight: bold;
+    font-stretch: 200%;
+}
+
+/* lever */
+.lever button {
+    padding: 20px;
+    border-radius: 50%;
+    margin: 50px 125px;
+    background-color: #dde1e7;
+    border-width: 0;
+    box-shadow: var(--shadow-lever-enabled);
+}
+.lever button:disabled {
+    box-shadow: var(--shadow-lever-disabled);
+}
+.lever button:enabled:hover {
+    box-shadow: var(--shadow-lever-disabled);
+    cursor: pointer;
+}
+
+/* reset */
+#reset-btn {
+    width: 60px;
+    height: 30px;
+    font-size: 20;
+    border-width: 0;
+    box-shadow: var(--shadow-lever-enabled);
+}
+
+#reset-btn:hover:enabled {
+    box-shadow: var(--shadow-lever-disabled);
+    cursor: pointer;
+}
+
+#reset-btn:disabled {
+    display: none;
+}

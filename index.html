@@ -8,14 +8,23 @@
 </head>
 <body>
 
-<div class="slots" id="slots">
+<div id="result">Waiting...</div>
+<div id="container"></div>
+
+<div class="lever">
+    <button type="button" id="lever1" disabled></button>
+    <button type="button" id="lever2" disabled></button>
+    <button type="button" id="lever3" disabled></button>
 </div>
 
-<button type="button" id="lever" disabled></button>
-<button type="button" id="start">Play</button>
+<div class="reset">
+    <button type="button" id="reset-btn"></button>
+</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="script.js"></script>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/jquerykeyframes/dist/jquery.keyframes.min.js"></script>
+<script src="main.js" type="module"></script>
 
 </body>
 </html>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "jquerykeyframes": "^1.0.8"
+  }
+}
