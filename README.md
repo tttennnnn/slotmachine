@@ -1,4 +1,4 @@
 # slotmachine
-slotmachine in js
+js slotmachine
 
 **_NOTE:_** Poor design warning
